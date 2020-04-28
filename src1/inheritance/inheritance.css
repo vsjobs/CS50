@@ -7,12 +7,12 @@
   margin: 20px; }
 
 .success {
-  background-color: green; }
+  background-color: #80dd80; }
 
 .warning {
-  background-color: orange; }
+  background-color: #dbb97a; }
 
 .error {
-  background-color: red; }
+  background-color: #d67272; }
 
 /*# sourceMappingURL=inheritance.css.map */

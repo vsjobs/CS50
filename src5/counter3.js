@@ -1,5 +1,5 @@
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('button').onclick = count;
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('#but1').onclick = count;
 });
 
 let counter = 0;

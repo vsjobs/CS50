@@ -1,0 +1,11 @@
+**** Study LINK ******
+https://dataschool.com/learn-sql/how-to-start-a-postgresql-server-on-mac-os-x/#using-postgresql-app
+**** STRAT POSTGRESS SERVER ******
+pg_ctl -D /usr/local/var/postgres start
+**** stop POSTGRESS SERVER ******
+pg_ctl -D /usr/local/var/postgres stop
+
+**** STRAT POSTGRESS CLI CLIENT ******
+psql postgres
+
+**** Use dbearver app as Postgres client ***

@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>My Website!</title>
-    </head>
-    <body>
-        <h1>{{ headline }}</h1>
-    </body>
+
+<head>
+    <title>My Website!</title>
+</head>
+
+<body>
+    {% if headline != None %}
+    <h1>{{ headline }}</h1>
+    {% else %}
+    <h1>Hello, world!</h1>
+    {% endif %}
+</body>
+
 </html>

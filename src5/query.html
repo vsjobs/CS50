@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script>
 
-            // Function to change heading to say goodbye
-            function hello() {
+<head>
+    <script>
+
+        // Function to change heading to say goodbye
+        function hello() {
+            if (document.querySelector('h1').innerHTML == 'Welcome!') {
                 document.querySelector('h1').innerHTML = 'Goodbye!';
+            } else {
+                document.querySelector('h2').innerHTML = 'Double Goodbye !!!';
             }
+        }
 
-        </script>
-        <title>My Website</title>
-    </head>
-    <body>
-        <h1>Welcome!</h1>
-        <button onclick="hello()">Click Here!</button>
-    </body>
+    </script>
+    <title>My Website</title>
+</head>
+
+<body>
+    <h1>Welcome!</h1>
+    <button onclick="hello()">Click Here!</button>
+    <h2>This is a new webpage</h2>
+</body>
+
 </html>

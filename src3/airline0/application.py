@@ -6,13 +6,16 @@ from sqlalchemy.orm import scoped_session, sessionmaker
 
 app = Flask(__name__)
 
+# export DATABASE_URL=postgresql+psycopg2://postgres:@localhost/CS50
 engine = create_engine(os.getenv("DATABASE_URL"))
 db = scoped_session(sessionmaker(bind=engine))
+
 
 @app.route("/")
 def index():
     flights = db.execute("SELECT * FROM flights").fetchall()
     return render_template("index.html", flights=flights)
+
 
 @app.route("/book", methods=["POST"])
 def book():
@@ -20,6 +23,7 @@ def book():
 
     # Get form information.
     name = request.form.get("name")
+    name = name.capitalize()
     try:
         flight_id = int(request.form.get("flight_id"))
     except ValueError:
@@ -29,7 +33,11 @@ def book():
     if db.execute("SELECT * FROM flights WHERE id = :id", {"id": flight_id}).rowcount == 0:
         return render_template("error.html", message="No such flight with that id.")
     db.execute("INSERT INTO passengers (name, flight_id) VALUES (:name, :flight_id)",
-            {"name": name, "flight_id": flight_id})
+               {"name": name, "flight_id": flight_id})
     db.commit()
     return render_template("success.html")
 
+
+@app.route("/error", methods=["GET"])
+def error():
+    return render_template("error.html", message="Invalid flight number.")

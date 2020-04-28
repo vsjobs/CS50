@@ -3,15 +3,19 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
 
+# export DATABASE_URL=postgresql+psycopg2://postgres:@localhost/CS50
 engine = create_engine(os.getenv("DATABASE_URL"))
 db = scoped_session(sessionmaker(bind=engine))
+
 
 def main():
 
     # List all flights.
-    flights = db.execute("SELECT id, origin, destination, duration FROM flights").fetchall()
+    flights = db.execute(
+        "SELECT id, origin, destination, duration FROM flights").fetchall()
     for flight in flights:
-        print(f"Flight {flight.id}: {flight.origin} to {flight.destination}, {flight.duration} minutes.")
+        print(
+            f"Flight {flight.id}: {flight.origin} to {flight.destination}, {flight.duration} minutes.")
 
     # Prompt user to choose a flight.
     flight_id = int(input("\nFlight ID: "))
@@ -31,6 +35,7 @@ def main():
         print(passenger.name)
     if len(passengers) == 0:
         print("No passengers.")
+
 
 if __name__ == "__main__":
     main()
