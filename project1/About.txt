@@ -1,0 +1,20 @@
+####  Heroku PostgresDB
+Host
+ec2-52-6-143-153.compute-1.amazonaws.com
+Database
+d9b5mvv71e0nip
+User
+tdrpipvlsgoxem
+Port
+5432
+Password
+8c40aa0dd7c7377fc12b4e35e68872dbc46cc0744df28359064a4683018f1c0d
+URI
+postgres://tdrpipvlsgoxem:8c40aa0dd7c7377fc12b4e35e68872dbc46cc0744df28359064a4683018f1c0d@ec2-52-6-143-153.compute-1.amazonaws.com:5432/d9b5mvv71e0nip
+Heroku CLI
+heroku pg:psql postgresql-encircled-06267 --app book-reviews001
+
+
+####  Good Reads API Key
+key: YLa1bBC37wdmIYZNJnkBw
+secret: RivcHN323xCmgmsmKdPXorx8pBRDMZ5Dv9TCtqJXk
