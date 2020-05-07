@@ -18,14 +18,18 @@ def main():
         try:
             book = Book(isbn=isbn, title=title, author_fullname=author_fullname,
                         year=year)
+            if isbn == 'isbn':
+                print(f"isbn={isbn}, title={title}, author_fullname={author_fullname}, \
+                      year={year}")
+                continue
             db.session.add(book)
+            db.session.commit()
             print(
                 f"Added book isbn =  {isbn} title = {title} author = {author_fullname} published year = {year}")
         except Exception as e:
             print(
                 f"Not adding book isbn =  {isbn} title = {title} author = {author_fullname} published year = {year}")
             continue
-    db.session.commit()
 
 
 if __name__ == "__main__":

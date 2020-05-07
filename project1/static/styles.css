@@ -1,0 +1,71 @@
+.heading {
+    color     : white;
+    text-align: center;
+}
+
+p {
+    font-family: sans-serif;
+    font-size  : 18px;
+}
+
+.book-list {
+    color                : black;
+    position             : relative;
+    background           : linear-gradient(0deg, white, rgb(249, 243, 241) 100%);
+    width                : 100%;
+    text-align           : center;
+    background-repeat    : no-repeat;
+    background-position  : center center;
+    background-attachment: scroll;
+    background-size      : cover;
+}
+
+table.center {
+    width        : 60%;
+    margin-left  : 20%;
+    margin-right : 20%;
+    border       : 20px;
+    border-bottom: 1px dotted #BDB76B;
+}
+
+.review {
+    text-align : center;
+    padding    : 10px;
+    width      : 60%;
+    margin-left: 20%;
+}
+
+
+
+table.myOtherTable {
+    width           : 60%;
+    margin-left     : 20%;
+    margin-right    : 20%;
+    text-align      : center;
+    background-color: #FFFFE0;
+    color           : #000;
+    font-size       : 18px;
+}
+
+.myOtherTable {
+    background-color: #FFFFE0;
+    border-collapse : collapse;
+    color           : #000;
+    font-size       : 18px;
+}
+
+.myOtherTable th {
+    background-color: #BDB76B;
+    color           : white;
+    width           : 50%;
+}
+
+.myOtherTable td,
+.myOtherTable th {
+    padding: 5px;
+    border : 0;
+}
+
+.myOtherTable td {
+    border-bottom: 1px dotted #BDB76B;
+}

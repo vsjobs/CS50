@@ -1,0 +1,53 @@
+{% extends "layout2.html" %}
+
+{% block heading %}
+Book Search !
+{% endblock %}
+
+{% block body %}
+<!-- Navigation -->
+
+<header class="masthead text-center text-white">
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+<div id="search">
+    <form class="booksearch" action="{{ url_for('booksearch') }}" method="post">
+        <div class="left">
+            <br>
+            <br>
+            <h1 class="text-white">Search for Books </h1>
+            <input type="text" name="isbn" placeholder="ISBN" />
+            <input type="text" name="title" placeholder="Title" />
+            <input type="text" name="author" placeholder="Author" />
+            <input type="submit" name="booksearch_submit" value="Search" />
+        </div>
+    </form>
+</div>
+<div class="book-list">
+    <table class="center">
+        <tr>
+            <th>Id</th>
+            <th>ISBN</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Year</th>
+        </tr>
+        {% if books  %}
+        {% for book in books %}
+        <tr>
+            <td>{{book.id}}</td>
+            <td>{{book.isbn}}</td>
+            <td> <a href="{{ url_for('review', book_id=book.id) }}"> {{book.title}}</a></td>
+            <td>{{book.author_fullname}}</td>
+            <td>{{book.year}}</td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+    </table>
+
+</div>
+
+{% endblock %}

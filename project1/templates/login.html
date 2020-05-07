@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block heading %}
+
+{% endblock %}
+
+{% block body %}
+
+<header class="masthead text-center text-white">
+
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+<!-- <div id="login-box"> -->
+<div id="login-a">
+
+    <form class="login" action="{{ url_for('login') }}" method="post">
+        <div class="left">
+            <BR><br>
+            <h1 class="text-white">Log In </h1>
+            <input type="text" name="username" placeholder="Username" />
+            <input type="password" name="password" placeholder="Password" />
+            <input type="submit" name="login_submit" value="Log In" />
+        </div>
+    </form>
+
+    <!--     <div class="right">
+        <span class="loginwith">Sign in with<br />social network</span>
+
+        <button class="social-signin facebook">Log in with facebook</button>
+        <button class="social-signin twitter">Log in with Twitter</button>
+        <button class="social-signin google">Log in with Google+</button>
+    </div> -->
+    <!-- <div class="or">OR</div> -->
+</div>
+<div>
+    <ol>
+        {% if books  %}
+        {% for book in books %}
+        <li>
+            <a href="review.html?book_id=" {{book.id}}> {{book.title}},&nbsp; &nbsp;&nbsp;&nbsp;
+                Author : {{book.author_fullname}} ,
+            </a>
+        </li>
+        {% endfor %}
+        {% endif %}
+    </ol>
+</div>
+{% endblock %}

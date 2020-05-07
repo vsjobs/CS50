@@ -1,0 +1,73 @@
+{% extends "layout2.html" %}
+
+{% block heading %}
+Book Review Website
+{% endblock %}
+
+{% block body %}
+
+<header class="masthead text-center text-white">
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+</header>
+<div>
+    <form class="review_books" action="{{ url_for('review', book_id=book.id) }}" method="post">
+        <div class="left">
+            <br><br>
+            <h6>{{book.title}}</h6>
+            <h6>ISBN : {{book.isbn}}</h6>
+            <h6>Author : {{book.author_fullname}}</h6>
+            <hr>
+            <H5>Submit Review</H5>
+            <input type="text" name="review_title" placeholder="Review Title" />
+            <textarea name="review_text" maxlength="500" rows="3" cols="100" placeholder="review"></textarea>
+            <input type="submit" name="bookreview_submit" value="Submit" />
+        </div>
+    </form>
+</div>
+<Hr>
+<div>
+    {% if rating_count  %}
+    <h5> Good Reads Rating Count = {{rating_count}}</h5>
+    {% endif %}
+    {% if average_rating  %}
+    <h5> Good Reads Average Rating = {{average_rating}}</h5>
+    {% endif %}
+</div>
+<Hr>
+<div>
+    <table class="center">
+
+        {% if reviews  %}
+        {% for review in reviews %}
+
+        <tr>
+            <td>
+                <b>{{review.review_title}} </b>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {{review.review}}
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+        </tr>
+        <tr>
+            <td>------------------------------------------------------------------------------------------------------------------------
+            </td>
+        </tr>
+        {% endfor %}
+        {% endif %}
+
+    </table>>
+</div>
+
+{% endblock %}
