@@ -1,0 +1,35 @@
+$color:rgb(0, 30, 255);
+
+#travel {
+    font-family: 'Lato';
+    font-size  : 0.9rem;
+    font-weight: 700;
+}
+
+#para_new {
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size  : 18px;
+    color      : $color;
+}
+
+%tablestyle {
+    font-size      : 18px;
+    padding        : 15px;
+    border         : 1px solid white;
+    border-collapse: collapse;
+}
+
+div {
+    table {
+        @extend %tablestyle;
+        float       : left;
+        table-layout: auto;
+        width       : 50%;
+    }
+
+    td {
+        @extend %tablestyle;
+        text-align: left;
+    }
+}

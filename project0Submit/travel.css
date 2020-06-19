@@ -1,0 +1,25 @@
+#travel {
+  font-family: 'Lato';
+  font-size: 0.9rem;
+  font-weight: 700; }
+
+#para_new {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-size: 18px;
+  color: #001eff; }
+
+div table, div td {
+  font-size: 18px;
+  padding: 15px;
+  border: 1px solid white;
+  border-collapse: collapse; }
+
+div table {
+  float: left;
+  table-layout: auto;
+  width: 50%; }
+div td {
+  text-align: left; }
+
+/*# sourceMappingURL=travel.css.map */
