@@ -4,11 +4,11 @@ Web Programming with Python and JavaScript
 1.  index.html 
     This is the first page of this project; a brief introduction about myself and an image
 2.  yoga.html
-     link on the navigation bar
+     This can be accessed via a link on the navigation bar
 3.  carnaticMusic.html
-        link on the navigation bar.  Has an image and Ordered list
+        This can be accessed via a link on the navigation bar.  Has an image and Ordered list
 4.  travel.html
-        link on navigation bar.  Has a table and bootstrap grid model and other bootstrap properties.  This file also uses a travel.css file that is compiled from a travel.scss file.  All the scss requirements like variable, nesting and inheretance are implemented in travel.scss file.
+        This can be accessed via a link on the navigation bar.  Has a table and bootstrap grid model and other bootstrap properties.  This file also uses a travel.css file that is compiled from a travel.scss file.  All the scss requirements like variable, nesting and inheretance are implemented in travel.scss file.
 5.  style.css
         style sheet used by all the webpages
 6.  travel.scss
