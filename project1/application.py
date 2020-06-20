@@ -44,12 +44,6 @@ def getGoodReadsRating(isbn):
     book = books[0]
     ratings_count = book['work_ratings_count']
     average_rating = book["average_rating"]
-
-    # book = json.loads(book_json)
-    # print(book)
-    # b1 = book["books"]
-    # rating_count = b1['work_ratings_count']
-    # print(b1)
     return ratings_count, average_rating
 
 
@@ -62,7 +56,6 @@ def index():
 def signup():
     if request.method == "POST":
         username = request.form.get("username")
-        # email = request.form.get("email")
         firstname = request.form.get("firstname")
         lastname = request.form.get("lastname")
         password1 = request.form.get("password")
@@ -73,8 +66,8 @@ def signup():
             db.session.add(user)
             db.session.commit()
 
-            msg = "User successfully added"
-            return render_template("login.html")
+            msg = "User successfully registered,  you can login now"
+            return render_template("login.html", msg=msg)
 
     return render_template("signup.html")
 

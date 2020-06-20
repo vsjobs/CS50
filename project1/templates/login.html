@@ -35,13 +35,18 @@
     </div> -->
     <!-- <div class="or">OR</div> -->
 </div>
+{% if msg %}
+<div class="alert alert-success" role="alert">
+    {{msg}}
+</div>
+{% endif %}
 <div>
     <ol>
         {% if books  %}
         {% for book in books %}
         <li>
-            <a href="review.html?book_id=" {{book.id}}> {{book.title}},&nbsp; &nbsp;&nbsp;&nbsp;
-                Author : {{book.author_fullname}} ,
+            <a href="review.html?book_id=" {{ book.id }}> {{ book.title }},&nbsp; &nbsp;&nbsp;&nbsp;
+                Author : {{ book.author_fullname }} ,
             </a>
         </li>
         {% endfor %}

@@ -3,6 +3,8 @@ export FLASK_APP=application.py
 export DATABASE_URL="postgres://tdrpipvlsgoxem:8c40aa0dd7c7377fc12b4e35e68872dbc46cc0744df28359064a4683018f1c0d@ec2-52-6-143-153.compute-1.amazonaws.com:5432/d9b5mvv71e0nip"
 export FLASK_ENV=development
 
+export DATABASE_URL=postgresql+psycopg2://postgres:@localhost/CS50
+
 ####  Heroku PostgresDB
 Host
 ec2-52-6-143-153.compute-1.amazonaws.com
